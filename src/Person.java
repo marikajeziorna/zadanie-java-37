@@ -4,7 +4,7 @@ public class Person {
     private String pesel;
     private int age;
 
-    public Person(String firstName, String lastName, String pesel, int age) {
+    public Person(String firstName, String lastName, String pesel, int age) throws NameUndefinedException, IncorrectAgeException {
         if (firstName == null && lastName == null) {
             throw new NameUndefinedException("First Name and Last Name can't be null.");
         }
